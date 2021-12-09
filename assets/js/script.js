@@ -6,7 +6,7 @@ var appID = 'b002b3316d73d825f3942e6f84e94112';
 var cityID = '';
 var getCityWeather = function(parameter) {
    cityID = $('.searchBar').val();
-   var url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityID + "&appid=" + appID;
+   var url = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + cityID + "&appid=" + appID;
 
 
    $.getJSON( url, function( data ) {
@@ -24,11 +24,23 @@ var getCityWeather = function(parameter) {
      var urlUI = `https://api.openweathermap.org/data/2.5/onecall?lat=${cityTemp.lat}&lon=${cityTemp.lon}&appid=${appID}`;
      $.getJSON( urlUI, function(data) {
         console.log(data);
-        cityTemp['uv'] = data.current.uvi;
-        console.log(cityTemp);
    
+     }).done(function(data) {
+      cityTemp['uv'] = data.current.uvi;
+      console.log(cityTemp);
+      console.log(data.daily[0].humidity);
+      console.log(data.daily[1].humidity);
+      console.log(data.daily[2].humidity);
+      console.log(data.daily[3].humidity);
+      console.log(data.daily[4].humidity);
+      $('.citySearch').html(cityTemp.name);
+      $('.temp strong').html(cityTemp.temp + ' °F');
+      $('.windspeed strong').html(cityTemp.windspeed + ' MPH');
+      $('.humidity strong').html(cityTemp.humidity + '%');
+      $('.uvi span').html(cityTemp.uv)
+      console.log( "second success" );
+
      }) 
-     console.log( "second success" );
     });
 }
 
