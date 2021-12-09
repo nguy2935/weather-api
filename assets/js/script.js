@@ -3,10 +3,8 @@ var appID = 'b002b3316d73d825f3942e6f84e94112';
 // var cityKey = api.openweathermap.org/data/2.5/weather?q={city name}&appid=b002b3316d73d825f3942e6f84e94112;
 
 // var url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityID;
-var cityID = '';
-var getCityWeather = function(parameter) {
-   cityID = $('.searchBar').val();
-   var url = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + cityID + "&appid=" + appID;
+var getCityWeather = function(cityName) {
+   var url = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + cityName + "&appid=" + appID;
 
    $.getJSON( url, function( data ) {
       console.log(url);
@@ -52,6 +50,10 @@ var getCityWeather = function(parameter) {
 }
 
 // the click button event listener
+var cities = [];
 $(document).on('click', '.searchBtn', function (event) {
-   getCityWeather();
+   var cityName = $('.searchBar').val();
+   cities.push(cityName);
+   localStorage.setItem('cityHistory', cities);
+   getCityWeather(cityName);
 });
