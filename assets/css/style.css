@@ -1,17 +1,35 @@
-header {
-    background-image: linear-gradient(to right blue, purple);
+
+header h1 {
+    background: #3B6DC3;
+    background: linear-gradient(to right, #3B6DC3, #303F90, #230555);
+    text-align: center;
+    color: white;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.search {
+    padding: 15px;
+}
+
+.search h2 {
+    padding: 10px;
+    margin: 10px;
+    font-style: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .searchBar {
     padding: 10px;
     margin: 10px;
-    width: 15%;
+    width: 20%;
+    border-radius: 5px;
 }
 
 .searchBtn {
     background: #5CB3FF;
     color: white;
     padding: 10px;
-    width: 15%;
+    margin: 10px;
+    width: 20%;
     border-radius: 5px;
 }

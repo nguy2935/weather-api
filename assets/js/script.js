@@ -10,10 +10,28 @@ var getCityWeather = function(parameter) {
 
 
    $.getJSON( url, function( data ) {
+      console.log(url);
+    }).done(function(data) {
+      var cityTemp = {
+         "name": data.name,
+         "temp": data.main.feels_like,
+         "windspeed": data.wind.speed,
+         "humidity": data.main.humidity,
+         "lat": data.coord.lat,
+         "lon": data.coord.lon
+     }            
 
+     var urlUI = `https://api.openweathermap.org/data/2.5/onecall?lat=${cityTemp.lat}&lon=${cityTemp.lon}&appid=${appID}`;
+     $.getJSON( urlUI, function(data) {
+        console.log(data);
+        cityTemp['uv'] = data.current.uvi;
+        console.log(cityTemp);
+   
+     }) 
+     console.log( "second success" );
     });
-   console.log(url);
 }
+
 
 $(document).on('click', '.searchBtn', function (event) {
    getCityWeather();

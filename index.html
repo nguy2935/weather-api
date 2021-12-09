@@ -4,21 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Weather App</title>
 </head>
 
 <body>
     <header><h1>Weather Dashboard</h1></header>
-    <div class="dashboard">
+    <section class="dashboard py-5 h-100">
         <div class="search">
             <h2>Search for a City:</h2> 
-            <input type="text" class="searchBar" placeholder="Search">
+            <input type="text" class="searchBar" placeholder="City">
         </br>
             <button class="searchBtn">Search</button>
         </div>
-    </div>
-</body>
+    </section>
 
+    <section class="vh-100">
+        <div class="container h-100">
+          <div class="row d-flex align-items-center">
+      
+              <div class="card shadow-0 border">
+                <div class="card-body p-4">
+                    <h3 class="mb-4 pb-2 fw-normal">Name of City Searched</h3>
+                  <p class="mb-2">Temp: <strong>5.42°C</strong></p>
+                  <p>Wind: <strong>4.37°C</strong></p>
+                  <p>Humidity: <strong>6.11°C</strong>, Min: <strong>3.89°C</strong></p>
+                  <p>UV Index: </p>
+      
+                  <div class="d-flex flex-row align-items-center">
+                    <p class="mb-0 me-4">Scattered Clouds</p>
+                    <i class="fas fa-cloud fa-3x" style="color: #eee;"></i>
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+          </div>
+      
+        </div>
+      </section>
+
+      <section class="5dayForecast">
+          
+      </section>
+</body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="assets/js/script.js"></script>
 
