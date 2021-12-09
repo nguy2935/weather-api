@@ -33,3 +33,6 @@ header h1 {
     width: 20%;
     border-radius: 5px;
 }
+.currentWeather, .weekForecast {
+    display: none;
+}
