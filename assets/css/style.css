@@ -33,6 +33,16 @@ header h1 {
     width: 20%;
     border-radius: 5px;
 }
+
+
+.card-body.fiveDisplay {
+    background-color: #33475A;
+    color: white;
+    height: 220px;
+    width: 185px;
+    border: solid 1px black;
+}
+
 .currentWeather, .weekForecast {
     display: none;
 }

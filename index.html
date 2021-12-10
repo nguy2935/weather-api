@@ -10,7 +10,8 @@
 
 <body>
     <header><h1>Weather Dashboard</h1></header>
-    <section class="dashboard py-5 h-100">
+    <!-- search bar-->
+    <section class="dashboard">
         <div class="search">
             <h2>Search for a City:</h2> 
             <input type="text" class="searchBar" placeholder="City">
@@ -23,9 +24,9 @@
     <!-- City Searched Weather-->
     <section class="currentWeather vh-50">
         <div class="container h-100">
-          <div class="row d-flex align-items-center">
-              <div class="card shadow-0 border">
-                <div class="card-body p-4">
+          <div class="align-items-center">
+              <div class="card border-dark">
+                <div class="card-body mainCity p-10">
                     <h3 class="citySearch mb-4 pb-2 fw-normal"></h3>
                   <p class="temp mb-2">Temp: <strong></strong></p>
                   <p class="windspeed">Wind: <strong></strong></p>
@@ -43,10 +44,10 @@
 
       <!-- 5-Day Forecast-->
       <section class="weekForecast vh-100">
-      <div class="container h-100">
-      <div class="card-deck">
+      <div class="container h-100 m-5">
         <h3 class="mb-4 pb-2 fw-normal">5-Day Forecast:</h3>
-        <div class="card bg-secondary">
+      <div class="card-deck">
+        <div class="card">
           <div class="card-body fiveDisplay text-left">
             <p class="date"><strong></strong></p>
             <p class="temp mb-2">Temp: <strong></strong></p>
@@ -54,7 +55,7 @@
             <p class="humidity">Humidity: <strong></strong></p>
           </div>
         </div>
-        <div class="card bg-secondary">
+        <div class="card">
           <div class="card-body fiveDisplay text-left">
             <p class="date"><strong></strong></p>
             <p class="temp mb-2">Temp: <strong></strong></p>
@@ -62,7 +63,7 @@
             <p class="humidity">Humidity: <strong></strong></p>
           </div>
         </div>
-        <div class="card bg-secondary">
+        <div class="card">
           <div class="card-body fiveDisplay text-left">
             <p class="date"><strong></strong></p>
             <p class="temp mb-2">Temp: <strong></strong></p>
@@ -70,7 +71,7 @@
             <p class="humidity">Humidity: <strong></strong></p>
           </div>
         </div>
-        <div class="card bg-secondary">
+        <div class="card">
           <div class="card-body fiveDisplay text-left">
             <p class="date"><strong></strong></p>
             <p class="temp mb-2">Temp: <strong></strong></p>
@@ -79,7 +80,7 @@
           </div>
         </div>
 
-        <div class="card bg-secondary">
+        <div class="card">
             <div class="card-body fiveDisplay text-left">
               <p class="date"><strong></strong></p>
               <p class="temp mb-2">Temp: <strong></strong></p>
