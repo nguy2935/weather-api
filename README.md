@@ -27,7 +27,11 @@
 * THEN I am again presented with current and future conditions for that city
 
 ## Third Party Libraries
-* API Open Weather Map
+* [API Open Weather Map: Current Weather Data](https://openweathermap.org/current)
+* [API Open Weather Map: One Call API](https://openweathermap.org/api/one-call-api)
+
+# Deployed Application
+* [Weather Dashboard](https://nguy2935.github.io/weather-dashboard/)
 
 ## Features
 * Search a city's weather. It will be in fahrenheit

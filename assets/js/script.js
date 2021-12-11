@@ -4,6 +4,7 @@ var cities = [];
 // var cityKey = api.openweathermap.org/data/2.5/weather?q={city name}&appid=b002b3316d73d825f3942e6f84e94112;
 
 // var url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityID;
+
 var getCityWeather = function(cityName) {
    var url = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" + cityName + "&appid=" + appID;
 
