@@ -57,7 +57,8 @@ header h1 {
 }
 
 .main {
-    float: right;
+    float: left;
+    padding: 50px;
 }
 
 .uviText {
