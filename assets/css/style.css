@@ -8,20 +8,25 @@ header h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+.dashboard {
+    float: left;
+}
+
 .search {
-    padding: 15px;
+    padding: 10px;
 }
 
 .search h2 {
     padding: 10px;
     margin: 10px;
     font-style: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 .searchBar {
     padding: 10px;
     margin: 10px;
-    width: 20%;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -30,7 +35,7 @@ header h1 {
     color: white;
     padding: 10px;
     margin: 10px;
-    width: 20%;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -45,4 +50,40 @@ header h1 {
 
 .currentWeather, .weekForecast {
     display: none;
+}
+
+.card.fiveStack {
+    border: none;
+}
+
+.main {
+    float: right;
+}
+
+.uviText {
+    background-color: #157E51;
+    border-radius: 0.25rem;
+}
+
+#citySearched {
+    border-top: #606060 1px solid ;
+    margin: 12px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background-color: #B7B7B7;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #1C1C1C;
+    width: 300px;
+}
+
+li::first-letter {
+    text-transform: uppercase;
 }

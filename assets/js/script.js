@@ -50,6 +50,7 @@ var getCityWeather = function(cityName) {
          cities.push(cityName);
       }
       localStorage.setItem('cityHistory', JSON.stringify(cities));
+      // localStorage.setItem('lastSearched', cityName);
       populateList();
      }) 
     });
@@ -75,4 +76,12 @@ $(document).on('click', '.searchBtn', function (event) {
 $(document).on('click', '.cityItem', function (event) {
    var cityList = $(this).text();
    getCityWeather(cityList);
+});
+
+$(document).ready(function(){
+   if(localStorage.getItem('cityHistory')) {
+      // var lastSearched = localStorage.getItem('lastSearched');
+      populateList();
+      // getCityWeather(lastSearched);
+   }
 });
