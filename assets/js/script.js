@@ -45,7 +45,6 @@ var getCityWeather = function(cityName) {
 
       $('.currentWeather').show();
       $('.weekForecast').show();
-      console.log( "second success" );
       // this checks to see if it duplicates stored in localstorage
       if (!cities.includes(cityName)) {
          cities.push(cityName);
@@ -72,6 +71,7 @@ $(document).on('click', '.searchBtn', function (event) {
    getCityWeather(cityName);
 });
 
+// the click for previous searched cities
 $(document).on('click', '.cityItem', function (event) {
    var cityList = $(this).text();
    getCityWeather(cityList);
