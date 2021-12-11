@@ -51,7 +51,7 @@ var getCityWeather = function(cityName) {
          cities.push(cityName);
       }
       localStorage.setItem('cityHistory', JSON.stringify(cities));
-      // localStorage.setItem('lastSearched', cityName);
+      localStorage.setItem('lastSearched', cityName);
       populateList();
      }) 
     });
@@ -81,8 +81,18 @@ $(document).on('click', '.cityItem', function (event) {
 
 $(document).ready(function(){
    if(localStorage.getItem('cityHistory')) {
-      // var lastSearched = localStorage.getItem('lastSearched');
+      var cityHistory = JSON.parse(localStorage.getItem('cityHistory'));
+      if (cityHistory) {
+         for (var i = 0; i < cityHistory.length; i++) {
+            var cityName = cityHistory[i];
+            if (!cities.includes(cityName)) {
+               cities.push(cityName);
+            }
+         }
+
+      }
+      var lastSearched = localStorage.getItem('lastSearched');
       populateList();
-      // getCityWeather(lastSearched);
+      getCityWeather(lastSearched);
    }
 });
