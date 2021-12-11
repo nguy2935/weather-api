@@ -1,5 +1,6 @@
 // weather api 
 var appID = 'b002b3316d73d825f3942e6f84e94112';
+var cities = [];
 // var cityKey = api.openweathermap.org/data/2.5/weather?q={city name}&appid=b002b3316d73d825f3942e6f84e94112;
 
 // var url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityID;
@@ -45,7 +46,12 @@ var getCityWeather = function(cityName) {
       $('.currentWeather').show();
       $('.weekForecast').show();
       console.log( "second success" );
-
+      // this checks to see if it duplicates stored in localstorage
+      if (!cities.includes(cityName)) {
+         cities.push(cityName);
+      }
+      localStorage.setItem('cityHistory', JSON.stringify(cities));
+      populateList();
      }) 
     });
 }
@@ -55,20 +61,18 @@ var populateList = function () {
    var cityHistory = JSON.parse(localStorage.getItem('cityHistory'));
    for (var i = 0; i < cityHistory.length; i++) {
       console.log(cityHistory[i]);
-      $('#citySearched').append(`<li><a href="">${cityHistory[i]}</a></li>`);
+      $('#citySearched').append(`<li class="cityItem">${cityHistory[i]}</li>`);
    }
    console.log(cityHistory);
 }
 
-// the click button event listener
-var cities = [];
+// the click button for searching the city's weather
 $(document).on('click', '.searchBtn', function (event) {
    var cityName = $('.searchBar').val();
-   // this checks to see if it duplicates stored in localstorage
-   if (!cities.includes(cityName)) {
-      cities.push(cityName);
-   }
-   localStorage.setItem('cityHistory', JSON.stringify(cities));
    getCityWeather(cityName);
-   populateList();
+});
+
+$(document).on('click', '.cityItem', function (event) {
+   var cityList = $(this).text();
+   getCityWeather(cityList);
 });
