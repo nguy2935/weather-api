@@ -1,3 +1,13 @@
+
+## Weather Dashboard
+
+## Table of Contents
+* [User Story](#User-Story)
+* [Acceptance Criteria](#Acceptance-Criteria)
+* [Third Party Libraries](#third-party-libraries)
+* [Features](#features)
+* [Screenshot of Landing Page](#screenshot-of-landing-page)
+
 ## USER STORY
 * AS A traveler
 * I WANT to see the weather outlook for multiple cities
@@ -15,3 +25,14 @@
 * THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
 * WHEN I click on a city in the search history
 * THEN I am again presented with current and future conditions for that city
+
+## Third Party Libraries
+* API Open Weather Map
+
+## Features
+* Search a city's weather. It will be in fahrenheit
+* Reload the page and the cities that you have searched for, will still be there
+* Displays today's weather and show a 5-day forecast
+
+## Screenshot of Landing Page
+![Full page screenshot of Work Day Schedule](assets/images/landing-page.png)
