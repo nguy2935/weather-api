@@ -51,9 +51,11 @@ var getCityWeather = function(cityName) {
 }
 
 var populateList = function () {
+   $('#citySearched').empty();
    var cityHistory = JSON.parse(localStorage.getItem('cityHistory'));
    for (var i = 0; i < cityHistory.length; i++) {
       console.log(cityHistory[i]);
+      $('#citySearched').append(`<li><a href="">${cityHistory[i]}</a></li>`);
    }
    console.log(cityHistory);
 }
